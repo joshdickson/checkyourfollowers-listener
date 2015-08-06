@@ -110,6 +110,16 @@ dbConnection.on('connected', function() {
 
 
         });
+
+        stream.on('error', function(error) {
+            console.log('Stream error: ');
+            console.log(error);
+
+            process.exit();
+
+        });
+
+
     });
 
 
