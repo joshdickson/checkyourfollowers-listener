@@ -24,6 +24,11 @@ dbConnection.on('connected', function() {
     });
 
 
+    setTimeout(function() {
+        process.exit();
+    }, (60000 * 30));
+
+
     var client = new Twitter({
         consumer_key: process.env.TWITTER_CONSUMER_KEY,
         consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
